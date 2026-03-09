@@ -3,140 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuraCloud | Level Up Your DevOps</title>
+    <title>AuraCloud | Power Your Dreams</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #000000;
-            background-image: radial-gradient(circle at top right, #003087 0%, #000000 70%);
+            background-color: #0a0a0a;
+            background-image: linear-gradient(135deg, #107C10 0%, #000000 40%);
+            background-attachment: fixed;
         }
-        .ps-blue { color: #003087; }
-        .ps-btn-blue { background-color: #003087; }
-        .ps-glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+        .xbox-green { color: #107C10; }
+        .bg-xbox-green { background-color: #107C10; }
+        .xbox-card {
+            background: rgba(25, 25, 25, 0.8);
+            border-bottom: 4px solid transparent;
+            transition: all 0.2s ease-in-out;
         }
-        .symbol-grid {
-            opacity: 0.1;
-            background-image: radial-gradient(#ffffff 1px, transparent 1px);
-            background-size: 30px 30px;
+        .xbox-card:hover {
+            border-bottom: 4px solid #107C10;
+            transform: scale(1.02);
+            background: rgba(40, 40, 40, 0.9);
+        }
+        .achievement-pop {
+            border-radius: 50px;
+            background: #262626;
+            border: 1px solid #3a3a3a;
         }
     </style>
 </head>
-<body class="text-white font-sans antialiased min-h-screen relative">
-    <div class="absolute inset-0 symbol-grid pointer-events-none"></div>
+<body class="text-white font-sans antialiased min-h-screen">
 
-    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto relative z-10">
-        <div class="text-2xl font-black tracking-tighter flex items-center">
-            <div class="grid grid-cols-2 gap-1 mr-3">
-                <div class="w-2 h-2 rounded-full border border-green-400"></div>
-                <div class="w-2 h-2 rounded-full border border-pink-400"></div>
-                <div class="w-2 h-2 rounded-full border border-blue-400"></div>
-                <div class="w-2 h-2 rounded-full border border-red-400"></div>
+    <nav class="flex items-center justify-between px-10 py-8 max-w-7xl mx-auto">
+        <div class="flex items-center space-x-4">
+            <div class="bg-white rounded-full p-1">
+                 <i class="fab fa-xbox text-black text-3xl"></i>
             </div>
-            AURACLOUD <span class="font-light ml-1">OS</span>
+            <span class="text-2xl font-black tracking-tighter uppercase italic">AuraCloud <span class="text-xbox-green">X</span></span>
         </div>
-        <div class="hidden md:flex space-x-10 text-xs font-bold uppercase tracking-widest">
-            <a href="#" class="hover:text-blue-400 transition">Store</a>
-            <a href="#" class="hover:text-blue-400 transition">Library</a>
-            <a href="#" class="hover:text-blue-400 transition">Network</a>
+        <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-400">
+            <a href="#" class="hover:text-white transition">Game Pass</a>
+            <a href="#" class="hover:text-white transition">Social</a>
+            <a href="#" class="hover:text-white transition">Settings</a>
         </div>
-        <button class="bg-white text-black px-6 py-2 rounded-sm text-xs font-black uppercase tracking-tighter hover:bg-blue-600 hover:text-white transition-all">
-            Join Plus
-        </button>
+        <div class="flex items-center space-x-4">
+            <span class="text-sm font-bold">DevOps_User</span>
+            <div class="w-10 h-10 rounded-full bg-xbox-green border-2 border-white/20 overflow-hidden">
+                <img src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Dev" alt="Avatar">
+            </div>
+        </div>
     </nav>
 
-    <header class="max-w-7xl mx-auto px-8 py-20 lg:py-32 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+    <header class="max-w-7xl mx-auto px-10 py-16 lg:py-24 grid lg:grid-cols-2 gap-16 items-center">
         <div>
-            <h1 class="text-6xl lg:text-8xl font-black text-white leading-none tracking-tighter italic">
-                PLAY <br> <span class="text-transparent" style="-webkit-text-stroke: 1px white;">HAS NO</span> <br> LIMITS.
+            <h1 class="text-6xl lg:text-8xl font-black uppercase italic leading-[0.9]">
+                Power Your <br> <span class="text-xbox-green">DevOps.</span>
             </h1>
-            <p class="mt-8 text-xl text-slate-300 max-w-md font-light leading-relaxed">
-                Experience the next generation of CI/CD. Deploy microservices with the precision of a DualSense controller. 
+            <p class="mt-8 text-xl text-slate-300 max-w-md font-medium">
+                The world's most powerful CI/CD engine. 12 Teraflops of deployment speed, optimized for the cloud.
             </p>
-            <div class="mt-12 flex items-center space-x-8">
-                <button class="ps-btn-blue hover:bg-blue-500 text-white px-10 py-4 rounded-full font-bold transition shadow-2xl shadow-blue-500/40">
-                    Start Campaign
-                </button>
-                <div class="flex space-x-4 text-2xl opacity-50">
-                    <i class="fa-regular fa-square text-pink-400"></i>
-                    <i class="fa-regular fa-circle text-red-500"></i>
-                    <i class="fa-solid fa-xmark text-blue-400"></i>
-                    <i class="fa-solid fa-caret-up text-green-400"></i>
+            
+            <div class="mt-10 achievement-pop p-4 flex items-center space-x-4 w-fit pr-8 shadow-2xl">
+                <div class="w-10 h-10 bg-xbox-green rounded-full flex items-center justify-center">
+                    <i class="fas fa-trophy text-white"></i>
+                </div>
+                <div>
+                    <p class="text-[10px] uppercase font-bold text-xbox-green tracking-widest leading-none">Achievement Unlocked</p>
+                    <p class="text-sm font-bold">Zero-Downtime Deployment (50G)</p>
                 </div>
             </div>
+
+            <div class="mt-12 flex space-x-4">
+                <button class="bg-xbox-green hover:bg-green-500 text-white px-12 py-4 font-black uppercase tracking-widest transition transform active:scale-95">
+                    Deploy Now
+                </button>
+                <button class="border-2 border-white/20 hover:border-white px-12 py-4 font-black uppercase tracking-widest transition">
+                    Optimize
+                </button>
+            </div>
         </div>
-        <div class="relative group">
-            <div class="absolute -inset-10 bg-blue-600/20 blur-3xl rounded-full group-hover:bg-blue-600/30 transition duration-1000"></div>
-            <div class="ps-glass p-1 rounded-3xl overflow-hidden shadow-2xl">
-                <div class="bg-black/60 p-8 rounded-[1.4rem]">
-                    <div class="flex justify-between items-center mb-6">
-                        <span class="text-[10px] tracking-[0.2em] font-bold text-blue-400">CONSOLE_OUTPUT_V5.0</span>
-                        <div class="flex space-x-1">
-                            <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
-                            <div class="w-1.5 h-1.5 bg-white/20 rounded-full"></div>
-                        </div>
-                    </div>
-                    <code class="text-sm font-mono leading-relaxed">
-                        <p class="text-white">$ git push aura-cloud master</p>
-                        <p class="text-slate-500 italic mt-2">// Loading assets...</p>
-                        <div class="w-full bg-white/10 h-1 mt-2 rounded-full overflow-hidden">
-                            <div class="bg-blue-500 h-full w-3/4 shadow-[0_0_10px_#3b82f6]"></div>
-                        </div>
-                        <p class="text-green-400 mt-4"><i class="fas fa-trophy mr-2 text-yellow-500"></i> Deployment Platinum Earned</p>
-                        <p class="text-blue-300">Target: AWS-East-1 (Production)</p>
-                    </code>
+
+        <div class="grid grid-cols-2 gap-4">
+            <div class="xbox-card p-6 h-48 flex flex-col justify-end">
+                <i class="fas fa-microchip text-3xl mb-auto opacity-20"></i>
+                <span class="text-xs font-bold opacity-60 uppercase">CPU Usage</span>
+                <span class="text-3xl font-black italic text-xbox-green">14%</span>
+            </div>
+            <div class="xbox-card p-6 h-48 flex flex-col justify-end">
+                <i class="fas fa-network-wired text-3xl mb-auto opacity-20"></i>
+                <span class="text-xs font-bold opacity-60 uppercase">Active Nodes</span>
+                <span class="text-3xl font-black italic">128</span>
+            </div>
+            <div class="col-span-2 xbox-card p-6 h-40 flex items-center justify-between border-l-8 border-l-xbox-green">
+                <div>
+                    <span class="text-xs font-bold opacity-60 uppercase">Pipeline Status</span>
+                    <h3 class="text-2xl font-black uppercase italic">Master Branch: Ready</h3>
                 </div>
+                <i class="fas fa-circle-check text-4xl text-xbox-green"></i>
             </div>
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto px-8 py-24 relative z-10">
-        <div class="grid md:grid-cols-4 gap-4">
-            <div class="ps-glass p-8 hover:bg-white/10 transition group">
-                <div class="w-10 h-10 mb-6 flex items-center justify-center border border-pink-400 text-pink-400 group-hover:bg-pink-400 group-hover:text-black transition">
-                    <i class="fa-regular fa-square"></i>
+    <footer class="mt-20 border-t border-white/10 py-10">
+        <div class="max-w-7xl mx-auto px-10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-2">
+                    <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_#107C10]"></div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Service Online</span>
                 </div>
-                <h3 class="text-lg font-bold uppercase tracking-widest mb-2">Build</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">Compile and containerize with hyper-speed performance.</p>
+                <span class="text-[10px] font-bold uppercase tracking-widest opacity-40">Latency: 14ms</span>
             </div>
-            <div class="ps-glass p-8 hover:bg-white/10 transition group">
-                <div class="w-10 h-10 mb-6 flex items-center justify-center border border-red-500 text-red-500 group-hover:bg-red-500 group-hover:text-black transition">
-                    <i class="fa-regular fa-circle"></i>
-                </div>
-                <h3 class="text-lg font-bold uppercase tracking-widest mb-2">Review</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">Automated security scans and unit testing gates.</p>
-            </div>
-            <div class="ps-glass p-8 hover:bg-white/10 transition group">
-                <div class="w-10 h-10 mb-6 flex items-center justify-center border border-blue-400 text-blue-400 group-hover:bg-blue-400 group-hover:text-black transition">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-                <h3 class="text-lg font-bold uppercase tracking-widest mb-2">Deploy</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">One-click push to global Kubernetes clusters.</p>
-            </div>
-            <div class="ps-glass p-8 hover:bg-white/10 transition group">
-                <div class="w-10 h-10 mb-6 flex items-center justify-center border border-green-400 text-green-400 group-hover:bg-green-400 group-hover:text-black transition">
-                    <i class="fa-solid fa-caret-up"></i>
-                </div>
-                <h3 class="text-lg font-bold uppercase tracking-widest mb-2">Scale</h3>
-                <p class="text-slate-400 text-xs leading-relaxed">Real-time telemetry and vertical scaling.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="mt-20 py-10 relative z-10">
-        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center opacity-40 grayscale hover:grayscale-0 transition duration-500">
-            <div class="text-[10px] font-bold uppercase tracking-[0.3em]">
-                &copy; 2026 AuraCloud Devops project / Sony Interactive Aesthetics
-            </div>
-            <div class="flex space-x-6 text-xl">
-                <i class="fab fa-playstation"></i>
-                <i class="fab fa-github"></i>
-                <i class="fab fa-docker"></i>
+            <div class="text-[10px] font-bold uppercase tracking-[0.4em] opacity-40">
+                AuraCloud Series X | DevOps Project 2026
             </div>
         </div>
     </footer>
+
 </body>
 </html>
