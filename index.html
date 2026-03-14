@@ -5,53 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AURACLOUD | VIPER CONSOLE</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --hazard-yellow: #FFD700;
-            --onyx-black: #0A0A0A;
-        }
-        body {
-            background-color: #000;
-            color: #fff;
-            background-image: radial-gradient(circle at 0% 0%, #1a1a1a 0%, #000 100%);
-        }
-        .stripes {
-            background: linear-gradient(135deg, var(--hazard-yellow) 25%, #000 25%, #000 50%, var(--hazard-yellow) 50%, var(--hazard-yellow) 75%, #000 75%, #000 100%);
-            background-size: 14px 14px;
-        }
-        .viper-card {
-            background: rgba(15, 15, 15, 0.9);
-            border: 1px solid #222;
-            transition: 0.3s;
-        }
-        .viper-card:hover {
-            border-color: var(--hazard-yellow);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
-        }
-        .btn-premium {
-            background: var(--hazard-yellow);
-            color: black;
-            font-weight: 900;
-            overflow: hidden;
-            position: relative;
-            transition: 0.3s;
-        }
-        .btn-premium::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: 0.5s;
-        }
-        .btn-premium:hover::after { left: 100%; }
-        .btn-premium:hover { transform: scale(1.05); box-shadow: 0 0 15px var(--hazard-yellow); }
-    </style>
 </head>
-<body class="font-sans antialiased uppercase tracking-widest min-h-screen">
+<body class="font-sans antialiased uppercase tracking-wider">
 
     <nav class="flex items-center justify-between px-10 py-6 max-w-7xl mx-auto">
-        <div class="flex items
+        <div class="flex items-center space-x-3">
+            <i class="fas fa-bolt text-2xl text-[var(--hazard-yellow)]"></i>
+            <span class="text-xl font-black">AURA_VIPER</span>
+        </div>
+
+        <div class="hidden lg:flex space-x-10 text-[10px] font-bold text-slate-500">
+            <a href="#" class="hover:text-white transition">Dashboard</a>
+            <a href="#" class="hover:text-white transition">Nodes</a>
+            <a href="#" class="hover:text-white transition">Registry</a>
+        </div>
+
+        <div class="flex items-center space-x-6">
+            <button class="btn-premium text-[10px]">
+                <i class="fas fa-crown mr-2"></i>Get Premium
+            </button>
+            <div class="w-10 h-10 bg-[#111] border border-yellow-500/30 flex items-center justify-center">
+                <i class="fas fa-user text-xs"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-10 py-20">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="stripes w-12 h-1.5 mb-6"></div>
+                <h1 class="text-8xl font-black leading-none mb-6">
+                    VIPER<br><span class="text-[var(--hazard-yellow)]">PROTOCOL</span>
+                </h1>
+                <p class="normal-case text-slate-400 text-lg max-w-md leading-relaxed">
+                    The next-gen console for DevOps engineers. High-velocity deployment, industrial-strength security, and total cluster control.
+                </p>
+                <div class="mt-10 flex space-x-4">
+                    <button class="bg-white text-black px-8 py-3 font-black text-xs hover:bg-[var(--hazard-yellow)] transition">DEPLOY_CORE</button>
+                    <button class="border border-white/20 px-8 py-3 font-black text-xs hover:border-white transition">DOCS.EXE</button>
+                </div>
+            </div>
+
+            <div class="industrial-card p-1">
+                <div class="bg-black p-8">
+                    <div class="flex items-center justify-between mb-8 opacity-50">
+                        <span class="text-[9px]">SYSTEM_LOG_V1.4</span>
+                        <i class="fas fa-circle text-[6px] text-green-500 animate-pulse"></i>
+                    </div>
+                    <code class="text-sm font-mono normal-case space-y-2 block">
+                        <p class="text-yellow-500">> Initiating handshake...</p>
+                        <p>> Connecting to AWS-Chennai-Edge...</p>
+                        <p class="text-green-500">> Connection Established [SECURE]</p>
+                        <p>> Loading Viper_OS Premium Modules...</p>
+                    </code>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="fixed bottom-0 w-full py-4 border-t border-white/5 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-10 flex justify-between items-center opacity-30">
+            <span class="text-[9px] font-bold">STATUS: NOMINAL</span>
+            <span class="text-[9px] font-bold">&copy; 2026 AURACLOUD SYSTEMS</span>
+        </div>
+    </footer>
+
+</body>
+</html>
