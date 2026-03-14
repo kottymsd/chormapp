@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIPER | UPGRADE ACCESS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root { --hazard: #FFD700; }
+        body { background: #000; color: #fff; }
+        .stripes { background: linear-gradient(135deg, var(--hazard) 25%, #000 25%, #000 50%, var(--hazard) 50%, var(--hazard) 75%, #000 75%, #000 100%); background-size: 14px 14px; }
+        .upgrade-card {
+            background: #0a0a0a;
+            border: 2px solid #1a1a1a;
+            transition: 0.4s;
+        }
+        .upgrade-card:hover { border-color: var(--hazard); transform: translateY(-10px); }
+    </style>
+</head>
+<body class="font-sans antialiased uppercase tracking-widest min-h-screen">
+
+    <nav class="p-10">
+        <a href="index.html" class="text-zinc-500 hover:text-[var(--hazard)] transition text-xs font-bold">
+            <i class="fas fa-chevron-left mr-2"></i> BACK_TO_CONSOLE
+        </a>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-10 py-10 text-center">
+        <div class="stripes h-2 w-32 mx-auto mb-10"></div>
+        <h1 class="text-6xl font-black italic mb-4 text-white">LEVEL <span class="text-[var(--hazard)]">UP.</span></h1>
+        <p class="normal-case text-zinc-500 mb-16">Unlock the Industrial Power of the Viper Elite Tier.</p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="upgrade-card p-10 opacity-50">
+                <h2 class="text-xl font-bold mb-4">BASIC_CORE</h2>
+                <div class="text-4xl font-black mb-6 italic text-white">₹0<span class="text-xs">/MO</span></div>
+                <ul class="text-[10px] text-left space-y-4 mb-10 text-zinc-400">
+                    <li><i class="fas fa-check mr-2"></i> Single Pipeline</li>
+                    <li><i class="fas fa-check mr-2"></i> Community Support</li>
+                </ul>
+                <button class="w-full border border-zinc-700 py-3 text-[10px] font-bold">CURRENT_VERSION</button>
+            </div>
+
+            <div class="upgrade-card p-10 relative">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[var(--hazard)] text-black text-[9px] font-black px-4 py-1">RECOMMENDED</div>
+                <h2 class="text-xl font-bold mb-4 text-[var(--hazard)]">VIPER_ELITE</h2>
+                <div class="text-4xl font-black mb-6 italic text-white">₹999<span class="text-xs">/MO</span></div>
+                <ul class="text-[10px] text-left space-y-4 mb-10 text-zinc-200">
+                    <li><i class="fas fa-check text-[var(--hazard)] mr-2"></i> Multi-Cloud Orchestration</li>
+                    <li><i class="fas fa-check text-[var(--hazard)] mr-2"></i> 0.1ms Build Latency</li>
+                    <li><i class="fas fa-check text-[var(--hazard)] mr-2"></i> Priority SSH Access</li>
+                    <li><i class="fas fa-check text-[var(--hazard)] mr-2"></i> Custom Dashboards</li>
+                </ul>
+                <button class="w-full bg-[var(--hazard)] text-black py-4 text-[10px] font-black hover:bg-white transition">
+                    PURCHASE_LICENSE
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-20 py-10 opacity-10 text-center text-[8px] tracking-[1em]">
+        SECURITY_PROTOCOL_ENCRYPTED // VIPER_CORE
+    </footer>
+
+</body>
+</html>
