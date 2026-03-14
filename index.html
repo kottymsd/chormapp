@@ -3,162 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURACLOUD | VIPER PHASE-01 ENGINEER</title>
+    <title>AURACLOUD | VIPER CONSOLE</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        /* Define the Industrial Disruptor Palette */
-        :root {
-            --hazard-yellow: #FFD700;
-            --onyx-black: #0A0A0A;
-            --obsidian: #000000;
-        }
-
-        body {
-            background-color: var(--obsidian);
-            color: #FFFFFF;
-            /* Suble hexagonal grid background for a tech feel */
-            background-image: 
-                linear-gradient(rgba(10, 10, 10, 0.95), rgba(0, 0, 0, 0.98)),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cpath fill='%23FFD700' fill-opacity='0.03' d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l13-7.5zM0 0h28v49H0V0zm1 1v47h26V1H1z'/%3E%3C/svg%3E");
-        }
-
-        .text-hazard { color: var(--hazard-yellow); }
-        .bg-hazard { background-color: var(--hazard-yellow); }
-        
-        .industrial-card {
-            background: rgba(10, 10, 10, 0.9);
-            border: 2px solid #1a1a1a;
-            position: relative;
-            transition: all 0.2s ease;
-        }
-        
-        .industrial-card::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            right: -2px;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 0 0 15px 15px;
-            border-color: transparent transparent transparent var(--hazard-yellow);
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-
-        .industrial-card:hover {
-            border-color: var(--hazard-yellow);
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
-        }
-
-        .industrial-card:hover::after {
-            opacity: 1;
-        }
-
-        /* Diagonal stripes utility class */
-        .stripes {
-            background-image: linear-gradient(135deg, var(--hazard-yellow) 25%, #000 25%, #000 50%, var(--hazard-yellow) 50%, var(--hazard-yellow) 75%, #000 75%, #000 100%);
-            background-size: 15px 15px;
-        }
-    </style>
 </head>
 <body class="font-sans antialiased uppercase tracking-wider">
 
-    <nav class="flex items-center justify-between px-10 py-5 max-w-7xl mx-auto border-b-2 border-dashed border-[#1a1a1a]">
-        <div class="flex items-center space-x-2">
-            <div class="text-3xl font-black text-hazard transform scale-y-125">
-                <i class="fas fa-bolt"></i>
-            </div>
-            <span class="text-xl font-black tracking-tighter">AURA_VIPER</span>
-        </div>
-        
-        <div class="hidden md:flex space-x-12 text-xs font-bold text-slate-400">
-            <a href="#" class="hover:text-hazard transition">Core_OS</a>
-            <a href="#" class="hover:text-hazard transition">Pipeline_Dev</a>
-            <a href="#" class="hover:text-hazard transition">Network_Status</a>
+    <nav class="flex items-center justify-between px-10 py-6 max-w-7xl mx-auto">
+        <div class="flex items-center space-x-3">
+            <i class="fas fa-bolt text-2xl text-[var(--hazard-yellow)]"></i>
+            <span class="text-xl font-black">AURA_VIPER</span>
         </div>
 
-        <div class="flex items-center space-x-1">
-             <div class="w-3 h-3 bg-hazard rounded-full"></div>
-             <span class="text-xs font-mono font-bold text-hazard">PHASE-01 LIVE</span>
+        <div class="hidden lg:flex space-x-10 text-[10px] font-bold text-slate-500">
+            <a href="#" class="hover:text-white transition">Dashboard</a>
+            <a href="#" class="hover:text-white transition">Nodes</a>
+            <a href="#" class="hover:text-white transition">Registry</a>
+        </div>
+
+        <div class="flex items-center space-x-6">
+            <button class="btn-premium text-[10px]">
+                <i class="fas fa-crown mr-2"></i>Get Premium
+            </button>
+            <div class="w-10 h-10 bg-[#111] border border-yellow-500/30 flex items-center justify-center">
+                <i class="fas fa-user text-xs"></i>
+            </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-10 py-16">
-        <div class="grid lg:grid-cols-12 gap-10 items-center">
-            
-            <div class="lg:col-span-7">
-                <div class="stripes w-16 h-2 mb-4"></div>
-                <h1 class="text-7xl lg:text-8xl font-black leading-[0.85] tracking-tighter mb-8 transform scale-y-110">
-                    A NEW <br>POWER<br><span class="text-hazard">AWAKENS.</span>
-                </div>
-                <p class="text-slate-300 max-w-lg mb-10 normal-case font-medium text-lg leading-relaxed">
-                    Introducing the Aura Viper DevOps Ecosystem. Raw industrial power meets unparalleled orchestration. The new industry standard for software deployment is here.
+    <main class="max-w-7xl mx-auto px-10 py-20">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="stripes w-12 h-1.5 mb-6"></div>
+                <h1 class="text-8xl font-black leading-none mb-6">
+                    VIPER<br><span class="text-[var(--hazard-yellow)]">PROTOCOL</span>
+                </h1>
+                <p class="normal-case text-slate-400 text-lg max-w-md leading-relaxed">
+                    The next-gen console for DevOps engineers. High-velocity deployment, industrial-strength security, and total cluster control.
                 </p>
-                <div class="flex space-x-4">
-                    <button class="bg-hazard text-black px-10 py-4 font-black uppercase tracking-widest transition transform hover:scale-105 active:scale-95 shadow-lg shadow-yellow-500/10">
-                        Initiate Build
-                    </button>
-                    <button class="bg-black border-2 border-hazard text-hazard px-10 py-4 font-black uppercase tracking-widest transition hover:bg-hazard hover:text-black">
-                        System Specs
-                    </button>
+                <div class="mt-10 flex space-x-4">
+                    <button class="bg-white text-black px-8 py-3 font-black text-xs hover:bg-[var(--hazard-yellow)] transition">DEPLOY_CORE</button>
+                    <button class="border border-white/20 px-8 py-3 font-black text-xs hover:border-white transition">DOCS.EXE</button>
                 </div>
             </div>
 
-            <div class="lg:col-span-5 industrial-card p-2">
-                <div class="border border-dashed border-[#1a1a1a] p-6 bg-black">
-                    <div class="flex justify-between items-center mb-6 border-b border-[#1a1a1a] pb-3">
-                        <span class="text-[10px] font-black text-hazard tracking-[0.3em]">VIPER_ENGINE_V1.0</span>
-                        <div class="flex space-x-1">
-                            <i class="fas fa-warning text-hazard text-xs opacity-60"></i>
-                            <i class="fas fa-warning text-hazard text-xs"></i>
-                        </div>
+            <div class="industrial-card p-1">
+                <div class="bg-black p-8">
+                    <div class="flex items-center justify-between mb-8 opacity-50">
+                        <span class="text-[9px]">SYSTEM_LOG_V1.4</span>
+                        <i class="fas fa-circle text-[6px] text-green-500 animate-pulse"></i>
                     </div>
-                    <code class="text-sm font-mono leading-relaxed normal-case text-slate-300">
-                        <p class="text-hazard">>> DETECTING NEW PROTOCOL...</p>
-                        <p>>> TARGET: PROD_CLUSTER_ALPHA</p>
-                        <p class="text-green-500">>> K8S NODE-08 ONLINE [OK]</p>
-                        <p class="text-green-500">>> PIPELINE GATE PASSED [OK]</p>
-                        <div class="flex items-center space-x-3 mt-4">
-                            <span class="text-xs">DEPLOYING:</span>
-                            <div class="stripes flex-grow h-3 shadow-[0_0_10px_rgba(255,215,0,0.3)]"></div>
-                        </div>
+                    <code class="text-sm font-mono normal-case space-y-2 block">
+                        <p class="text-yellow-500">> Initiating handshake...</p>
+                        <p>> Connecting to AWS-Chennai-Edge...</p>
+                        <p class="text-green-500">> Connection Established [SECURE]</p>
+                        <p>> Loading Viper_OS Premium Modules...</p>
                     </code>
                 </div>
             </div>
         </div>
-
-        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="industrial-card p-6 col-span-2">
-                <div class="flex justify-between items-start mb-6">
-                    <h4 class="text-sm font-black text-hazard tracking-widest">Active Nodes</h4>
-                    <i class="fas fa-server opacity-20 text-3xl"></i>
-                </div>
-                <div class="text-6xl font-black italic">1,024<span class="text-xl text-green-500">/OK</span></div>
-            </div>
-            
-            <div class="industrial-card p-6 xbox-hover">
-                <div class="flex justify-between items-start mb-6">
-                    <h4 class="text-sm font-black text-hazard tracking-widest">Build Time</h4>
-                    <i class="fas fa-clock opacity-20 text-3xl"></i>
-                </div>
-                <div class="text-5xl font-black italic">0.9 <span class="text-base opacity-60">SEC</span></div>
-            </div>
-
-            <div class="industrial-card p-6 xbox-hover border-l-hazard">
-                <div class="flex justify-between items-start mb-6">
-                    <h4 class="text-sm font-black text-hazard tracking-widest">Data Flow</h4>
-                    <i class="fas fa-network-wired opacity-20 text-3xl"></i>
-                </div>
-                <div class="text-5xl font-black italic">92 <span class="text-base opacity-60">TB/S</span></div>
-            </div>
-        </div>
     </main>
 
-    <footer class="mt-20 stripes h-12 flex items-center justify-center">
-        <div class="bg-black text-[9px] font-black uppercase tracking-[0.5em] px-8 py-1 shadow-inner">
-            AURA_VIPER Phase-01 // Engineer Protocol // DevOps Project 2026
+    <footer class="fixed bottom-0 w-full py-4 border-t border-white/5 bg-black/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-10 flex justify-between items-center opacity-30">
+            <span class="text-[9px] font-bold">STATUS: NOMINAL</span>
+            <span class="text-[9px] font-bold">&copy; 2026 AURACLOUD SYSTEMS</span>
         </div>
     </footer>
 
