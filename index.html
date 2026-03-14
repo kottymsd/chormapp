@@ -3,137 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuraCloud | Multi-Platform DevOps</title>
+    <title>AURACLOUD | VIPER PHASE-01 ENGINEER</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        /* Define the Industrial Disruptor Palette */
         :root {
-            --ps-blue: #003087;
-            --xb-green: #107C10;
-            --nt-red: #ff3c28;
-            --nt-blue: #0ab9e6;
+            --hazard-yellow: #FFD700;
+            --onyx-black: #0A0A0A;
+            --obsidian: #000000;
         }
+
         body {
-            background: radial-gradient(circle at top left, #1a1a1a, #000000);
-            min-height: 100vh;
+            background-color: var(--obsidian);
+            color: #FFFFFF;
+            /* Suble hexagonal grid background for a tech feel */
+            background-image: 
+                linear-gradient(rgba(10, 10, 10, 0.95), rgba(0, 0, 0, 0.98)),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cpath fill='%23FFD700' fill-opacity='0.03' d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l13-7.5zM0 0h28v49H0V0zm1 1v47h26V1H1z'/%3E%3C/svg%3E");
         }
-        .hybrid-glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        /* Nintendo Switch Joy-Con Border Style */
-        .joy-con-left { border-left: 6px solid var(--nt-blue); }
-        .joy-con-right { border-right: 6px solid var(--nt-red); }
+
+        .text-hazard { color: var(--hazard-yellow); }
+        .bg-hazard { background-color: var(--hazard-yellow); }
         
-        /* Xbox Hover Scale */
-        .xbox-hover:hover {
-            transform: scale(1.03);
-            border-color: var(--xb-green);
-            box-shadow: 0 0 20px rgba(16, 124, 16, 0.2);
+        .industrial-card {
+            background: rgba(10, 10, 10, 0.9);
+            border: 2px solid #1a1a1a;
+            position: relative;
+            transition: all 0.2s ease;
         }
-        /* PS Glow */
-        .ps-glow {
-            box-shadow: 0 0 30px rgba(0, 48, 135, 0.4);
+        
+        .industrial-card::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: -2px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 15px 15px;
+            border-color: transparent transparent transparent var(--hazard-yellow);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .industrial-card:hover {
+            border-color: var(--hazard-yellow);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+        }
+
+        .industrial-card:hover::after {
+            opacity: 1;
+        }
+
+        /* Diagonal stripes utility class */
+        .stripes {
+            background-image: linear-gradient(135deg, var(--hazard-yellow) 25%, #000 25%, #000 50%, var(--hazard-yellow) 50%, var(--hazard-yellow) 75%, #000 75%, #000 100%);
+            background-size: 15px 15px;
         }
     </style>
 </head>
-<body class="text-slate-100 font-sans antialiased">
+<body class="font-sans antialiased uppercase tracking-wider">
 
-    <nav class="flex items-center justify-between px-10 py-6 max-w-7xl mx-auto border-b border-white/5">
-        <div class="flex items-center space-x-3">
-            <div class="flex space-x-1">
-                <div class="w-3 h-3 bg-[#0ab9e6] rounded-full"></div>
-                <div class="w-3 h-3 bg-[#ff3c28] rounded-full"></div>
+    <nav class="flex items-center justify-between px-10 py-5 max-w-7xl mx-auto border-b-2 border-dashed border-[#1a1a1a]">
+        <div class="flex items-center space-x-2">
+            <div class="text-3xl font-black text-hazard transform scale-y-125">
+                <i class="fas fa-bolt"></i>
             </div>
-            <span class="text-xl font-black italic tracking-tighter">AURA<span class="text-blue-500">ULTRA</span></span>
+            <span class="text-xl font-black tracking-tighter">AURA_VIPER</span>
         </div>
-        <div class="flex space-x-8 uppercase text-[10px] tracking-[0.3em] font-bold">
-            <a href="#" class="hover:text-blue-400">PlayStation Hub</a>
-            <a href="#" class="hover:text-green-500">Xbox Network</a>
-            <a href="#" class="hover:text-red-500">Nintendo Online</a>
+        
+        <div class="hidden md:flex space-x-12 text-xs font-bold text-slate-400">
+            <a href="#" class="hover:text-hazard transition">Core_OS</a>
+            <a href="#" class="hover:text-hazard transition">Pipeline_Dev</a>
+            <a href="#" class="hover:text-hazard transition">Network_Status</a>
         </div>
-        <div class="flex items-center space-x-4">
-             <i class="fas fa-wifi text-xs text-green-500"></i>
-             <span class="text-xs font-mono">Lvl 99 Admin</span>
+
+        <div class="flex items-center space-x-1">
+             <div class="w-3 h-3 bg-hazard rounded-full"></div>
+             <span class="text-xs font-mono font-bold text-hazard">PHASE-01 LIVE</span>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-10 py-12">
-        <div class="grid lg:grid-cols-12 gap-6">
+    <main class="max-w-7xl mx-auto px-10 py-16">
+        <div class="grid lg:grid-cols-12 gap-10 items-center">
             
-            <div class="lg:col-span-8 hybrid-glass p-10 joy-con-left ps-glow relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-8 opacity-10 text-8xl">
-                    <i class="fab fa-playstation"></i>
+            <div class="lg:col-span-7">
+                <div class="stripes w-16 h-2 mb-4"></div>
+                <h1 class="text-7xl lg:text-8xl font-black leading-[0.85] tracking-tighter mb-8 transform scale-y-110">
+                    A NEW <br>POWER<br><span class="text-hazard">AWAKENS.</span>
                 </div>
-                <h1 class="text-6xl font-black leading-none mb-6">ALL PLATFORMS. <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-green-500 to-red-500">ONE PIPELINE.</span></h1>
-                <p class="text-slate-400 max-w-lg mb-8">Deploying cross-platform microservices. Your infrastructure, unified across every ecosystem.</p>
-                
+                <p class="text-slate-300 max-w-lg mb-10 normal-case font-medium text-lg leading-relaxed">
+                    Introducing the Aura Viper DevOps Ecosystem. Raw industrial power meets unparalleled orchestration. The new industry standard for software deployment is here.
+                </p>
                 <div class="flex space-x-4">
-                    <button class="bg-white text-black px-8 py-3 font-bold rounded-sm hover:bg-blue-600 hover:text-white transition">Initialize Build</button>
-                    <button class="bg-transparent border border-white/20 px-8 py-3 font-bold rounded-sm hover:border-red-500 transition">System Settings</button>
+                    <button class="bg-hazard text-black px-10 py-4 font-black uppercase tracking-widest transition transform hover:scale-105 active:scale-95 shadow-lg shadow-yellow-500/10">
+                        Initiate Build
+                    </button>
+                    <button class="bg-black border-2 border-hazard text-hazard px-10 py-4 font-black uppercase tracking-widest transition hover:bg-hazard hover:text-black">
+                        System Specs
+                    </button>
                 </div>
             </div>
 
-            <div class="lg:col-span-4 grid grid-rows-2 gap-6">
-                <div class="hybrid-glass p-6 xbox-hover joy-con-right flex flex-col justify-between">
-                    <div class="flex justify-between items-start">
-                        <span class="text-[10px] font-bold uppercase text-green-500 tracking-widest">CPU Power</span>
-                        <i class="fab fa-xbox text-xl opacity-30"></i>
+            <div class="lg:col-span-5 industrial-card p-2">
+                <div class="border border-dashed border-[#1a1a1a] p-6 bg-black">
+                    <div class="flex justify-between items-center mb-6 border-b border-[#1a1a1a] pb-3">
+                        <span class="text-[10px] font-black text-hazard tracking-[0.3em]">VIPER_ENGINE_V1.0</span>
+                        <div class="flex space-x-1">
+                            <i class="fas fa-warning text-hazard text-xs opacity-60"></i>
+                            <i class="fas fa-warning text-hazard text-xs"></i>
+                        </div>
                     </div>
-                    <div class="text-4xl font-black italic">12.0 <span class="text-sm">TFLOPS</span></div>
-                </div>
-                <div class="hybrid-glass p-6 xbox-hover joy-con-right flex flex-col justify-between">
-                    <div class="flex justify-between items-start">
-                        <span class="text-[10px] font-bold uppercase text-blue-400 tracking-widest">Memory Flow</span>
-                        <i class="fas fa-memory text-xl opacity-30"></i>
-                    </div>
-                    <div class="text-4xl font-black italic">GDDR6 <span class="text-sm">Active</span></div>
+                    <code class="text-sm font-mono leading-relaxed normal-case text-slate-300">
+                        <p class="text-hazard">>> DETECTING NEW PROTOCOL...</p>
+                        <p>>> TARGET: PROD_CLUSTER_ALPHA</p>
+                        <p class="text-green-500">>> K8S NODE-08 ONLINE [OK]</p>
+                        <p class="text-green-500">>> PIPELINE GATE PASSED [OK]</p>
+                        <div class="flex items-center space-x-3 mt-4">
+                            <span class="text-xs">DEPLOYING:</span>
+                            <div class="stripes flex-grow h-3 shadow-[0_0_10px_rgba(255,215,0,0.3)]"></div>
+                        </div>
+                    </code>
                 </div>
             </div>
         </div>
 
-        <div class="mt-12">
-            <h3 class="text-xs font-black uppercase tracking-[0.5em] mb-8 text-slate-500">Active Deployment Gallery</h3>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <div class="aspect-video hybrid-glass hover:border-blue-400 cursor-pointer flex items-center justify-center flex-col space-y-2 border-b-4 border-b-blue-500">
-                    <i class="fas fa-layer-group opacity-40"></i>
-                    <span class="text-[10px] font-bold">K8S_PROD</span>
+        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="industrial-card p-6 col-span-2">
+                <div class="flex justify-between items-start mb-6">
+                    <h4 class="text-sm font-black text-hazard tracking-widest">Active Nodes</h4>
+                    <i class="fas fa-server opacity-20 text-3xl"></i>
                 </div>
-                <div class="aspect-video hybrid-glass hover:border-red-500 cursor-pointer flex items-center justify-center flex-col space-y-2 border-b-4 border-b-red-500">
-                    <i class="fas fa-fire-flame-curved opacity-40"></i>
-                    <span class="text-[10px] font-bold">REDIS_CACHE</span>
+                <div class="text-6xl font-black italic">1,024<span class="text-xl text-green-500">/OK</span></div>
+            </div>
+            
+            <div class="industrial-card p-6 xbox-hover">
+                <div class="flex justify-between items-start mb-6">
+                    <h4 class="text-sm font-black text-hazard tracking-widest">Build Time</h4>
+                    <i class="fas fa-clock opacity-20 text-3xl"></i>
                 </div>
-                <div class="aspect-video hybrid-glass hover:border-green-500 cursor-pointer flex items-center justify-center flex-col space-y-2 border-b-4 border-b-green-500">
-                    <i class="fas fa-database opacity-40"></i>
-                    <span class="text-[10px] font-bold">MONGO_DB</span>
+                <div class="text-5xl font-black italic">0.9 <span class="text-base opacity-60">SEC</span></div>
+            </div>
+
+            <div class="industrial-card p-6 xbox-hover border-l-hazard">
+                <div class="flex justify-between items-start mb-6">
+                    <h4 class="text-sm font-black text-hazard tracking-widest">Data Flow</h4>
+                    <i class="fas fa-network-wired opacity-20 text-3xl"></i>
                 </div>
-                <div class="aspect-video hybrid-glass hover:border-yellow-500 cursor-pointer flex items-center justify-center flex-col space-y-2 border-b-4 border-b-yellow-500">
-                    <i class="fas fa-shield-halved opacity-40"></i>
-                    <span class="text-[10px] font-bold">AUTH_GATE</span>
-                </div>
-                <div class="aspect-video hybrid-glass bg-white/10 flex items-center justify-center">
-                    <i class="fas fa-plus text-2xl opacity-20"></i>
-                </div>
+                <div class="text-5xl font-black italic">92 <span class="text-base opacity-60">TB/S</span></div>
             </div>
         </div>
     </main>
 
-    <footer class="fixed bottom-0 w-full p-6 bg-black/80 backdrop-blur-md border-t border-white/5">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-6">
-                <div class="flex -space-x-2">
-                    <div class="w-8 h-8 rounded-full border-2 border-black bg-blue-500"></div>
-                    <div class="w-8 h-8 rounded-full border-2 border-black bg-green-500"></div>
-                    <div class="w-8 h-8 rounded-full border-2 border-black bg-red-500"></div>
-                </div>
-                <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">Hybrid Engine Online</span>
-            </div>
-            <div class="text-[9px] font-bold uppercase tracking-[0.2em] opacity-30">
-                AuraCloud // OS Version 10.0.3-Hybrid
-            </div>
+    <footer class="mt-20 stripes h-12 flex items-center justify-center">
+        <div class="bg-black text-[9px] font-black uppercase tracking-[0.5em] px-8 py-1 shadow-inner">
+            AURA_VIPER Phase-01 // Engineer Protocol // DevOps Project 2026
         </div>
     </footer>
 
