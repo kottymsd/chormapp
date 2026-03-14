@@ -3,72 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURACLOUD | VIPER CONSOLE</title>
+    <title>AuraCloud | Friendly Neighborhood DevOps</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --spidey-red: #C4002D;
+            --spidey-blue: #003785;
+            --web-white: #f8fafc;
+        }
+        body {
+            background-color: #050505;
+            color: var(--web-white);
+            /* Subtle Hexagonal Web Pattern */
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(196, 0, 45, 0.05) 0%, transparent 80%),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='42' viewBox='0 0 24 42'%3E%3Cpath fill='%23ffffff' fill-opacity='0.03' d='M12 0l12 6.928v13.856L12 27.712 0 20.784V6.928L12 0zm0 41.568l12-6.928V20.784L12 13.856 0 20.784v13.856l12 6.928z'/%3E%3C/svg%3E");
+        }
+        .spidey-gradient {
+            background: linear-gradient(135deg, var(--spidey-red) 0%, #8b0000 100%);
+        }
+        .web-border {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .web-border:hover {
+            border-color: var(--spidey-red);
+            box-shadow: 0 0 25px rgba(196, 0, 45, 0.3);
+            transform: translateY(-5px);
+        }
+        /* Spider-Sense Pulse Animation */
+        .spider-sense {
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(196, 0, 45, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(196, 0, 45, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(196, 0, 45, 0); }
+        }
+    </style>
 </head>
-<body class="font-sans antialiased uppercase tracking-wider">
+<body class="font-sans antialiased tracking-tight min-h-screen">
 
-    <nav class="flex items-center justify-between px-10 py-6 max-w-7xl mx-auto">
+    <nav class="flex items-center justify-between px-10 py-8 max-w-7xl mx-auto relative z-10">
         <div class="flex items-center space-x-3">
-            <i class="fas fa-bolt text-2xl text-[var(--hazard-yellow)]"></i>
-            <span class="text-xl font-black">AURA_VIPER</span>
-        </div>
-
-        <div class="hidden lg:flex space-x-10 text-[10px] font-bold text-slate-500">
-            <a href="#" class="hover:text-white transition">Dashboard</a>
-            <a href="#" class="hover:text-white transition">Nodes</a>
-            <a href="#" class="hover:text-white transition">Registry</a>
-        </div>
-
-        <div class="flex items-center space-x-6">
-            <button class="btn-premium text-[10px]">
-                <i class="fas fa-crown mr-2"></i>Get Premium
-            </button>
-            <div class="w-10 h-10 bg-[#111] border border-yellow-500/30 flex items-center justify-center">
-                <i class="fas fa-user text-xs"></i>
+            <div class="w-10 h-10 spidey-gradient rounded-full flex items-center justify-center spider-sense">
+                <i class="fas fa-spider text-white text-xl"></i>
             </div>
+            <span class="text-2xl font-black uppercase tracking-tighter">AURA<span class="text-[var(--spidey-red)]">WEB</span></span>
         </div>
+        <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-400">
+            <a href="#" class="hover:text-[var(--spidey-red)] transition">Multiverse Hub</a>
+            <a href="#" class="hover:text-[var(--spidey-red)] transition">Spider-Nodes</a>
+            <a href="#" class="hover:text-[var(--spidey-red)] transition">Suit-Configs</a>
+        </div>
+        <button class="bg-[var(--spidey-red)] hover:bg-white hover:text-black text-white px-6 py-2 rounded-full text-[10px] font-black uppercase transition-all shadow-lg shadow-red-900/20">
+            <i class="fas fa-crown mr-2"></i>Unlock Premium
+        </button>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-10 py-20">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="stripes w-12 h-1.5 mb-6"></div>
-                <h1 class="text-8xl font-black leading-none mb-6">
-                    VIPER<br><span class="text-[var(--hazard-yellow)]">PROTOCOL</span>
-                </h1>
-                <p class="normal-case text-slate-400 text-lg max-w-md leading-relaxed">
-                    The next-gen console for DevOps engineers. High-velocity deployment, industrial-strength security, and total cluster control.
-                </p>
-                <div class="mt-10 flex space-x-4">
-                    <button class="bg-white text-black px-8 py-3 font-black text-xs hover:bg-[var(--hazard-yellow)] transition">DEPLOY_CORE</button>
-                    <button class="border border-white/20 px-8 py-3 font-black text-xs hover:border-white transition">DOCS.EXE</button>
-                </div>
+    <main class="max-w-7xl mx-auto px-10 py-16 lg:py-24 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <div>
+            <span class="text-[var(--spidey-red)] font-bold text-xs uppercase tracking-[0.3em]">Great Power. Great Deployments.</span>
+            <h1 class="text-7xl lg:text-8xl font-black leading-none mt-4 mb-8">
+                SWING INTO <br><span class="text-[var(--spidey-blue)]">PROD.</span>
+            </h1>
+            <p class="text-zinc-400 text-lg max-w-md leading-relaxed mb-10">
+                AuraWeb connects your microservices with the strength of high-tensile webbing. Secure, agile, and always on time.
+            </p>
+            <div class="flex space-x-4">
+                <button class="spidey-gradient text-white px-10 py-4 font-black text-xs rounded-sm hover:brightness-125 transition">WEB_LAUNCH</button>
+                <button class="border border-zinc-800 px-10 py-4 font-black text-xs rounded-sm hover:bg-white hover:text-black transition">VIEW_SUIT_LAB</button>
             </div>
+        </div>
 
-            <div class="industrial-card p-1">
-                <div class="bg-black p-8">
-                    <div class="flex items-center justify-between mb-8 opacity-50">
-                        <span class="text-[9px]">SYSTEM_LOG_V1.4</span>
-                        <i class="fas fa-circle text-[6px] text-green-500 animate-pulse"></i>
-                    </div>
-                    <code class="text-sm font-mono normal-case space-y-2 block">
-                        <p class="text-yellow-500">> Initiating handshake...</p>
-                        <p>> Connecting to AWS-Chennai-Edge...</p>
-                        <p class="text-green-500">> Connection Established [SECURE]</p>
-                        <p>> Loading Viper_OS Premium Modules...</p>
-                    </code>
+        <div class="web-border bg-[#0a0a0a]/80 backdrop-blur-xl p-8 rounded-2xl">
+            <div class="flex justify-between items-center mb-6">
+                <div class="flex space-x-2">
+                    <div class="w-2 h-2 rounded-full bg-red-600"></div>
+                    <div class="w-2 h-2 rounded-full bg-zinc-800"></div>
                 </div>
+                <span class="text-[9px] font-bold opacity-30 tracking-widest">SPIDEY_SENSE_V4.2</span>
             </div>
+            <code class="text-sm font-mono text-zinc-300 space-y-3 block">
+                <p class="text-[var(--spidey-red)]">> Detecting system vulnerabilities...</p>
+                <p>> Analyzing web of dependencies...</p>
+                <div class="w-full bg-zinc-900 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-[var(--spidey-blue)] h-full w-2/3 shadow-[0_0_10px_#003785]"></div>
+                </div>
+                <p class="text-green-500">> Suit Integrity: 100%</p>
+                <p class="text-zinc-500 italic mt-4">// Thwip! Deployment successful.</p>
+            </code>
         </div>
     </main>
 
-    <footer class="fixed bottom-0 w-full py-4 border-t border-white/5 bg-black/50 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-10 flex justify-between items-center opacity-30">
-            <span class="text-[9px] font-bold">STATUS: NOMINAL</span>
-            <span class="text-[9px] font-bold">&copy; 2026 AURACLOUD SYSTEMS</span>
+    <section class="max-w-7xl mx-auto px-10 py-12 grid md:grid-cols-3 gap-6 relative z-10">
+        <div class="web-border p-8 rounded-xl bg-zinc-900/30">
+            <i class="fas fa-mask text-2xl text-[var(--spidey-red)] mb-4"></i>
+            <h3 class="font-black uppercase text-sm mb-2">Total Masking</h3>
+            <p class="text-zinc-500 text-xs normal-case">Identity and secret management handled with full encryption.</p>
+        </div>
+        <div class="web-border p-8 rounded-xl bg-zinc-900/30">
+            <i class="fas fa-wind text-2xl text-[var(--spidey-blue)] mb-4"></i>
+            <h3 class="font-black uppercase text-sm mb-2">Agile Scaling</h3>
+            <p class="text-zinc-500 text-xs normal-case">Move between clouds as fast as swinging through Manhattan.</p>
+        </div>
+        <div class="web-border p-8 rounded-xl bg-zinc-900/30">
+            <i class="fas fa-spider text-2xl text-[var(--spidey-red)] mb-4"></i>
+            <h3 class="font-black uppercase text-sm mb-2">Interconnected</h3>
+            <p class="text-zinc-500 text-xs normal-case">Seamless service mesh that keeps every node in the loop.</p>
+        </div>
+    </section>
+
+    <footer class="mt-20 py-10 border-t border-zinc-900 text-center relative z-10">
+        <div class="opacity-20 text-[9px] font-black uppercase tracking-[0.5em]">
+            &copy; 2026 AuraWeb Systems // Daily Bugle Certified
         </div>
     </footer>
 
