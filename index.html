@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuraCloud | Messi The Magician Edition</title>
+    <title>AuraCloud | The GOAT Hybrid Edition</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <style>
-        /* Blaugrana Color Palette */
+        /* The Hybrid Palette: Madrid White/Gold + Barca Blue/Red */
         :root {
+            --madrid-white: #FFFFFF;
+            --madrid-gold: #FEBE10;
             --barca-blue: #004D98;
             --barca-red: #A50044;
-            --barca-gold: #EDBB00;
-            --pitch-dark: #020617;
-            --glass: rgba(255, 255, 255, 0.03);
+            --pitch-black: #050505;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            background-color: var(--pitch-dark);
-            color: #f8fafc;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--pitch-black);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-            /* Subtle Blue/Red gradient background */
+            /* Split Background Glow */
             background-image: 
-                radial-gradient(circle at top right, rgba(165, 0, 68, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at bottom left, rgba(0, 77, 152, 0.15) 0%, transparent 40%);
+                radial-gradient(circle at 0% 0%, rgba(254, 190, 16, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(0, 77, 152, 0.15) 0%, transparent 50%);
         }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -35,81 +35,81 @@
         .justify-between { justify-content: space-between; }
 
         /* NAVIGATION */
-        nav { padding: 30px 0; border-bottom: 1px solid rgba(237, 187, 0, 0.1); }
-        .logo { font-size: 1.8rem; font-weight: 900; letter-spacing: -1px; display: flex; align-items: center; }
-        .logo i { color: var(--barca-gold); margin-right: 10px; }
-        .logo span { color: var(--barca-blue); }
-        .logo b { color: var(--barca-red); }
+        nav { 
+            padding: 25px 0; 
+            border-bottom: 1px solid rgba(255,255,255,0.05); 
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; }
+        .logo span { color: var(--madrid-gold); }
         
-        .nav-links a { 
-            color: #94a3b8; text-decoration: none; font-size: 11px; font-weight: 700; 
-            margin-left: 35px; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s;
+        /* THE HYBRID BUTTON */
+        .btn-goat {
+            padding: 12px 30px;
+            background: linear-gradient(90deg, var(--madrid-gold), #fff, var(--barca-red));
+            background-size: 200% auto;
+            color: #000;
+            border: none;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 11px;
+            cursor: pointer;
+            transition: 0.5s;
+            border-radius: 2px;
         }
-        .nav-links a:hover { color: var(--barca-gold); }
-
-        /* MAGICAL BUTTONS */
-        .btn {
-            padding: 12px 35px; border-radius: 50px; border: none; cursor: pointer; 
-            font-weight: 800; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; transition: 0.4s;
-        }
-        .btn-gold { 
-            background: var(--barca-gold); color: #000; 
-            box-shadow: 0 0 20px rgba(237, 187, 0, 0.3);
-        }
-        .btn-gold:hover { 
-            background: #fff; transform: scale(1.05); 
-            box-shadow: 0 0 30px rgba(237, 187, 0, 0.6);
-        }
-        .btn-outline { 
-            background: transparent; border: 1px solid rgba(255,255,255,0.1); color: #fff; 
-        }
-        .btn-outline:hover { border-color: var(--barca-red); background: rgba(165, 0, 68, 0.1); }
+        .btn-goat:hover { background-position: right center; transform: scale(1.05); }
 
         /* HERO SECTION */
-        .hero { display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; padding: 120px 0; align-items: center; }
-        .hero h1 { font-size: 4.5rem; line-height: 1; margin-bottom: 25px; font-weight: 900; }
-        .magic-text { 
-            background: linear-gradient(to right, #004D98, #A50044);
+        .hero { padding: 100px 0; text-align: center; }
+        .hero h1 { 
+            font-size: 6rem; 
+            line-height: 0.8; 
+            font-weight: 900; 
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .split-text {
+            background: linear-gradient(to right, var(--madrid-gold) 45%, #fff 50%, var(--barca-blue) 55%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .hero p { color: #94a3b8; margin-bottom: 40px; font-size: 1.1rem; line-height: 1.7; max-width: 500px; }
 
-        /* TIKI-TAKA DATA CARD */
-        .magic-card {
-            background: var(--glass);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 40px;
-            border-radius: 24px;
-            backdrop-filter: blur(10px);
-            position: relative;
-            border-top: 4px solid var(--barca-gold);
-        }
+        /* DUAL TERMINAL CARDS */
+        .dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 50px; }
         
-        .ballon-glow {
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            font-size: 3rem;
-            color: var(--barca-gold);
-            filter: drop-shadow(0 0 15px var(--barca-gold));
-            animation: float 4s ease-in-out infinite;
+        .card {
+            background: rgba(255,255,255,0.02);
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+            transition: 0.3s;
         }
+        .card-7 { border-top: 4px solid var(--madrid-gold); }
+        .card-10 { border-top: 4px solid var(--barca-red); }
+        .card:hover { background: rgba(255,255,255,0.05); border-color: #fff; }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .tag {
+            font-size: 9px;
+            font-weight: 900;
+            padding: 4px 12px;
+            display: inline-block;
+            margin-bottom: 20px;
         }
+        .tag-madrid { background: var(--madrid-gold); color: #000; }
+        .tag-barca { background: var(--barca-red); color: #fff; }
 
-        .terminal-code { font-family: 'Fira Code', monospace; font-size: 14px; }
-        .code-row { margin-bottom: 15px; display: block; }
-        .gold { color: var(--barca-gold); }
-        .blue { color: #60a5fa; }
+        .code { font-family: monospace; font-size: 13px; color: #888; line-height: 1.8; }
+        .white { color: #fff; }
 
-        @media (max-width: 900px) {
-            .hero { grid-template-columns: 1fr; text-align: center; }
-            .hero h1 { font-size: 3.2rem; }
-            .hero p { margin: 0 auto 40px; }
+        /* FOOTER */
+        footer { padding: 80px 0; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 100px; text-align: center; }
+        
+        @media (max-width: 800px) {
+            .hero h1 { font-size: 3.5rem; }
+            .dual-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -117,57 +117,59 @@
 
     <nav>
         <div class="container flex justify-between">
-            <div class="logo">
-                <i class="fas fa-crown"></i>
-                <span>AURA</span><b>10</b>
-            </div>
-            <div class="nav-links flex">
-                <a href="#">La Masia</a>
-                <a href="#">The Magician</a>
-                <a href="#">Camp Nou</a>
-                <button class="btn btn-gold" style="margin-left: 40px;">
-                    <i class="fas fa-trophy" style="margin-right: 8px;"></i>G.O.A.T ACCESS
-                </button>
+            <div class="logo">AURA<span>GOAT</span></div>
+            <div class="flex" style="gap: 30px;">
+                <div class="flex" style="gap: 15px; font-size: 10px; font-weight: 700; color: #555;">
+                    <span>MADRID_v7</span>
+                    <span>BARCA_v10</span>
+                </div>
+                <button class="btn-goat">Upgrade to Legend</button>
             </div>
         </div>
     </nav>
 
     <main class="container">
         <section class="hero">
-            <div>
-                <div style="margin-bottom: 20px;">
-                    <span style="font-size: 10px; font-weight: 800; color: var(--barca-gold); letter-spacing: 4px; text-transform: uppercase;">Pure Football. Pure Code.</span>
-                </div>
-                <h1>GENIUS <br>IN EVERY <br><span class="magic-text">PIPELINE.</span></h1>
-                <p>Aura10 brings the effortless precision of Leo Messi to your DevOps lifecycle. Deploy with magic, scale with grace, and conquer the cloud.</p>
-                <div class="flex">
-                    <button class="btn btn-gold" style="margin-right: 20px;">LAUNCH MAGIC</button>
-                    <button class="btn btn-outline">THE_LAB_DOCS</button>
-                </div>
-            </div>
-
-            <div class="magic-card">
-                <div class="ballon-glow">
-                    <i class="fas fa-circle"></i>
-                </div>
-                <div class="terminal-code">
-                    <span class="code-row gold">> INITIATING ANKARA_MESSI_PROTOCOL...</span>
-                    <span class="code-row">> Mapping Tiki-Taka Network...</span>
-                    <span class="code-row blue">> Found space in Amazon-Cluster-01</span>
-                    <div style="width: 100%; height: 2px; background: rgba(255,255,255,0.1); margin: 25px 0; position: relative;">
-                        <div style="width: 100%; height: 100%; background: linear-gradient(to right, var(--barca-blue), var(--barca-red));"></div>
+            <span style="font-size: 10px; letter-spacing: 8px; font-weight: 900; opacity: 0.5;">THE ULTIMATE DEVOPS CLASICO</span>
+            <h1 class="split-text">POWER & <br> PRECISION</h1>
+            <p style="color: #666; max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem;">
+                The Aura GOAT Hybrid merges the mechanical efficiency of CR7 with the artistic genius of Messi. 
+                One infrastructure, two legacies.
+            </p>
+            
+            <div class="dual-grid">
+                <div class="card card-7">
+                    <span class="tag tag-madrid">THE MACHINE (CR7)</span>
+                    <div class="code">
+                        <p class="white">> INITIATING AURA_SPEED_V7</p>
+                        <p>> Benchmarking Teraflops: <span style="color: var(--madrid-gold);">UNLIMITED</span></p>
+                        <p>> Precision Build: 99.9% Efficiency</p>
+                        <div style="height: 1px; background: #222; margin: 20px 0;"></div>
+                        <p style="font-style: italic;">"Your love makes me strong, your hate makes me unstoppable."</p>
                     </div>
-                    <span class="code-row" style="color: #4ade80;">> Goal scored. Deployment finished with 100% accuracy.</span>
-                    <span class="code-row" style="margin-top: 25px; opacity: 0.3; font-style: italic;">// Simple is hard. - Cruyff //</span>
+                </div>
+
+                <div class="card card-10">
+                    <span class="tag tag-barca">THE MAGIC (MESSI)</span>
+                    <div class="code">
+                        <p class="white">> INITIATING AURA_MAGIC_V10</p>
+                        <p>> Fluid Networking: <span style="color: var(--barca-blue);">TIKI-TAKA</span></p>
+                        <p>> Deploy Accuracy: Pure Genius</p>
+                        <div style="height: 1px; background: #222; margin: 20px 0;"></div>
+                        <p style="font-style: italic;">"I start early and I stay late, day after day, year after year."</p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer style="padding: 60px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 50px;">
-        <div style="opacity: 0.2; font-size: 10px; font-weight: 700; letter-spacing: 10px; text-transform: uppercase;">
-            MÉS QUE UN DEVOPS // AURA10 // 2026
+    <footer>
+        <div style="font-size: 12px; font-weight: 900; margin-bottom: 20px;">
+            <i class="fas fa-star" style="color: var(--madrid-gold);"></i>
+            <span style="margin: 0 20px; opacity: 0.2;">MÉS QUE UN ENGINE // REAL INFRASTRUCTURE</span>
+            <i class="fas fa-star" style="color: var(--madrid-gold);"></i>
         </div>
+        <div style="opacity: 0.1; font-size: 8px; letter-spacing: 15px;">AURACLOUD GOAT HYBRID // 2026</div>
     </footer>
 
 </body>
